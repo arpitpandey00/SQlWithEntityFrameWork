@@ -3,10 +3,10 @@ C:\Users\S S INFOTECH\source\repos\DStore\DStore\bin\Debug\netcoreapp3.1\DStore.
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\bin\Debug\netcoreapp3.1\DStore.Data.runtimeconfig.dev.json
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\bin\Debug\netcoreapp3.1\DStore.Data.dll
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\bin\Debug\netcoreapp3.1\DStore.Data.pdb
-C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.csprojAssemblyReference.cache
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.AssemblyInfoInputs.cache
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.AssemblyInfo.cs
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.csproj.CoreCompileInputs.cache
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.dll
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.pdb
 C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.genruntimeconfig.cache
+C:\Users\S S INFOTECH\source\repos\DStore\DStore\obj\Debug\netcoreapp3.1\DStore.Data.csprojAssemblyReference.cache
