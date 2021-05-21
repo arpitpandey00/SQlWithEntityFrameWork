@@ -10,7 +10,8 @@ namespace DStore.UI
     {
         static void Main(string[] args)
         {
-            RetriveData.ProductWithinCategory();           
+            // RetriveData.ProductWithinCategory();           
+            RetriveData.StaffRecordPhoneOrName();
         }
     }
 }

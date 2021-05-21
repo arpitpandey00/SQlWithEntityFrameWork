@@ -107,7 +107,18 @@ namespace DStore.UI
         {
             using (DStoreContext context = new DStoreContext())
             {
-                //var query = 
+                var query = from category in context.Set<Category>()
+                            join prodcategory in context.Set<ProductCategory>() on
+                            category.CategoryId equals prodcategory.CategoryId
+                            join product in context.Set<Product>() on
+                            prodcategory.ProductId equals product.ProductId
+                            group product by category.CategoryId into refGroup
+                            orderby refGroup.Count<Product>() descending
+                            select (new { count = refGroup.Count<Product>(), CategoryId = refGroup.Key });
+                foreach (var item in query)
+                {
+                    Console.WriteLine($"{item.CategoryId} {item.count}");
+                }
             }
 
         }
