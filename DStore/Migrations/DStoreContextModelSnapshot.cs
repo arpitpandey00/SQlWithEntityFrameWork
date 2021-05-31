@@ -75,13 +75,14 @@ namespace DStore.Data.Migrations
             modelBuilder.Entity("DStore.Data.Inventory", b =>
                 {
                     b.Property<int>("ProductId")
-                        .HasColumnType("integer");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<int>("ProductQuantity")
                         .HasColumnType("integer");
 
-                    b.HasIndex("ProductId")
-                        .IsUnique();
+                    b.HasKey("ProductId");
 
                     b.ToTable("Inventory");
                 });
@@ -89,9 +90,7 @@ namespace DStore.Data.Migrations
             modelBuilder.Entity("DStore.Data.Product", b =>
                 {
                     b.Property<int>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("timestamp without time zone");
@@ -308,11 +307,11 @@ namespace DStore.Data.Migrations
                     b.ToTable("SupplierProductOrders");
                 });
 
-            modelBuilder.Entity("DStore.Data.Inventory", b =>
+            modelBuilder.Entity("DStore.Data.Product", b =>
                 {
-                    b.HasOne("DStore.Data.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
+                    b.HasOne("DStore.Data.Inventory", "Inventory")
+                        .WithOne("Product")
+                        .HasForeignKey("DStore.Data.Product", "ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -50,8 +50,8 @@ namespace DStore.Data.Infrastructure
             modelBuilder.Entity<Staff>().Property(x => x.Salary).IsRequired();
 
             //configure inventory
-            modelBuilder.Entity<Inventory>().HasNoKey();
-            modelBuilder.Entity<Inventory>().HasIndex(r => r.ProductId).IsUnique();
+            modelBuilder.Entity<Inventory>().HasKey(r => r.ProductId);
+            modelBuilder.Entity<Inventory>().HasOne<Product>(s => s.Product).WithOne(ad => ad.Inventory).HasForeignKey<Product>(ad => ad.ProductId);
             modelBuilder.Entity<Inventory>().Property(x => x.ProductQuantity).IsRequired();
 
             //configure category

@@ -13,5 +13,7 @@ namespace DStore.Data
         public DateTime ExpiryDate { get; set; }
         public Boolean InStock { get; set; }
 
+        public Inventory Inventory { get; set; }
+
     }
 }
